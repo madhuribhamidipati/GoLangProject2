@@ -1,4 +1,3 @@
-// this runs our net server
 
 package main
 
@@ -8,7 +7,6 @@ import (
 	"net/http"
 )
 
-// data structures putting in the json
 type Payload struct {
 	Stuff Data
 }
@@ -22,7 +20,6 @@ type Fruits map[string]int
 type Vegetables map[string]int
 
 func serveRest(w http.ResponseWriter, r *http.Request) {
-	// writes to the response writer - we need to need json for it
 	response, err := getJsonResponse()
 	if err != nil {
 		panic(err)
